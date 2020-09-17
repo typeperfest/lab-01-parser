@@ -24,9 +24,9 @@ string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
-#hunter_add_package(GTest)
-add_subdirectory(third_party/gtest)
-#find_package(GTest CONFIG REQUIRED)
+hunter_add_package(GTest)
+# add_subdirectory(third_party/gtest)
+find_package(GTest CONFIG REQUIRED)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
@@ -52,11 +52,13 @@ target_include_directories(tests
 )
 target_include_directories(parser_printer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 # TODO: change template word to project name and delete this comment
-target_link_libraries(tests gtest_main parser)
+target_link_libraries(tests gtest_main parser_printer)
 target_link_libraries(main PUBLIC
 	nlohmann_json::nlohmann_json
 )
 target_link_libraries(main PUBLIC parser_printer)
+
+target_link_libraries(parser_printer PUBLIC nlohmann_json::nlohmann_json)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
@@ -66,7 +68,7 @@ if(BUILD_COVERAGE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   find_package(codecov)
   # TODO: change template word to project name and delete this comment
-  add_coverage(parser)
+  add_coverage(parser_printer)
   add_coverage(tests)
   list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")
   coverage_evaluate()

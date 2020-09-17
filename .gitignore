@@ -34,7 +34,5 @@
 third_party/
 
 .idea/
-_build/
- build/
- cmake-build-debug/
+*build*/
 

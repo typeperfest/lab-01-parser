@@ -1,0 +1,25 @@
+/home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/bin/g++-8 -G "CodeBlocks - Unix Makefiles" /home/perfest/AL_LABS/lab-01-parser
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/perfest/.hunter
+-- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 020aca2 | Config-ID: 48401e9 ]
+-- [hunter] NLOHMANN_JSON_ROOT: /home/perfest/.hunter/_Base/9a3594a/020aca2/48401e9/Install (ver.: 3.6.1)
+CMake Error at CMakeLists.txt:35 (add_library):
+  The target name "parser&printer" is reserved or not valid for certain CMake
+  features, such as generator expressions, and may result in undefined
+  behavior.
+
+
+CMake Error at CMakeLists.txt:48 (target_include_directories):
+  Cannot specify include directories for target "parser" which is not built
+  by this project.
+
+
+CMake Error at CMakeLists.txt:56 (target_link_libraries):
+  Cannot specify link libraries for target "parser" which is not built by
+  this project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles/CMakeError.log".

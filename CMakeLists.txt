@@ -34,8 +34,7 @@ find_package(nlohmann_json CONFIG REQUIRED)
 # TODO: change template word to project name and delete this comment
 add_library(parser_printer STATIC
   # enum your files and delete this comment
-        ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp
-        include/student.h include/parser_printer.hpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp)
 add_executable(tests
   # TODO: enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
@@ -51,6 +50,7 @@ target_include_directories(main
 target_include_directories(tests 
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
+target_include_directories(parser_printer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 # TODO: change template word to project name and delete this comment
 target_link_libraries(tests gtest_main parser)
 target_link_libraries(main PUBLIC

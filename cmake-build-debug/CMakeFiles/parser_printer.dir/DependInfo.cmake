@@ -10,6 +10,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../include"
+  "/home/perfest/.hunter/_Base/9a3594a/020aca2/48401e9/Install/include"
   )
 
 # Targets to which this target links.

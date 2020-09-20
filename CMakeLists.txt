@@ -24,41 +24,29 @@ string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
-hunter_add_package(GTest)
-# add_subdirectory(third_party/gtest)
-find_package(GTest CONFIG REQUIRED)
+# hunter_add_package(GTest)
+add_subdirectory(third_party/gtest)
+# find_package(GTest CONFIG REQUIRED)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
-
-# TODO: change template word to project name and delete this comment
 add_library(parser_printer STATIC
-  # enum your files and delete this comment
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/parser_printer.cpp)
+target_include_directories(parser_printer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(parser_printer PUBLIC nlohmann_json::nlohmann_json)
+
 add_executable(tests
-  # TODO: enum your files and delete this comment
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
 )
 add_executable(main
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp)
 
 
-# TODO: change template word to project name and delete this comment
-target_include_directories(main
-  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-target_include_directories(tests 
-  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-target_include_directories(parser_printer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-# TODO: change template word to project name and delete this comment
 target_link_libraries(tests gtest_main parser_printer)
-target_link_libraries(main PUBLIC
-	nlohmann_json::nlohmann_json
-)
+
 target_link_libraries(main PUBLIC parser_printer)
 
-target_link_libraries(parser_printer PUBLIC nlohmann_json::nlohmann_json)
+
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
@@ -67,7 +55,7 @@ if(BUILD_COVERAGE)
   set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   find_package(codecov)
-  # TODO: change template word to project name and delete this comment
+
   add_coverage(parser_printer)
   add_coverage(tests)
   list(APPEND LCOV_REMOVE_PATTERNS "'${PROJECT_SOURCE_DIR}/tests/*'")

@@ -5,14 +5,17 @@
 #ifndef TEMPLATE_STUDENT_H
 #define TEMPLATE_STUDENT_H
 
-#endif  // TEMPLATE_STUDENT_H
 
 #include <vector>
 #include <iostream>
+#include <any>
 
 struct Student {
   std::string Name;
-  std::string Group;
+  std::any Group;
   double Avg;
-  std::vector<std::string> Debt;
+  std::any Debt;
 };
+
+
+#endif  // TEMPLATE_STUDENT_H

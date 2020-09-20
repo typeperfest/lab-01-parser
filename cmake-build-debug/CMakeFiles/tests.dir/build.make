@@ -100,6 +100,7 @@ tests_EXTERNAL_OBJECTS =
 tests: CMakeFiles/tests.dir/tests/test.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: lib/libgtest_maind.a
+tests: libparser_printerd.a
 tests: lib/libgtestd.a
 tests: CMakeFiles/tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tests"

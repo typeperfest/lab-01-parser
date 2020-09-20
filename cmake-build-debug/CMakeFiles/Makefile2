@@ -184,6 +184,7 @@ CMakeFiles/parser_printer.dir/clean:
 # Target rules for target CMakeFiles/tests.dir
 
 # All Build rule for target.
+CMakeFiles/tests.dir/all: CMakeFiles/parser_printer.dir/all
 CMakeFiles/tests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/tests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
@@ -193,7 +194,7 @@ CMakeFiles/tests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest_main.dir
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule

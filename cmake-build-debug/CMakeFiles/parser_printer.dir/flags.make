@@ -6,5 +6,5 @@ CXX_FLAGS =  -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/perfest/AL_LABS/lab-01-parser/include -isystem /home/perfest/.hunter/_Base/9a3594a/020aca2/48401e9/Install/include 
 

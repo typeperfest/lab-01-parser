@@ -44,38 +44,34 @@ std::vector<Student> PARSER(const std::string& fileName)
   return students;
 }
 
-template<typename T>
-struct deteminedType
+std::ostream& operator << (std::ostream& out, const std::any& object)
 {
-  T value;
-  deteminedType<T>(const T& val)
+  if (object.type() == typeid(std::string))
   {
-    value = val;
+    out << std::any_cast<std::string>(object);
   }
-};
-
-
-
-void determine_type(std::any& object)
-{
-  if (object.type() == typeid(std::string)) std::any_cast<std::string>(object);
-  else if (object.type() == typeid(float)) std::any_cast<float>(object);
-  else if (object.type() == typeid(int)) std::any_cast<int>(object);
+  else if (object.type() == typeid(int))
+  {
+    out << std::any_cast<int>(object);
+  }
+  else if (object.type() == typeid(float))
+  {
+    out << std::any_cast<float>(object);
+  }
   else if (object.type() == typeid(std::vector<std::string>))
   {
-    std::any_cast<std::vector<std::string>>(object);
+    std::vector<std::string> str_vec = std::any_cast<std::vector<std::string>>(object);
+    for (auto& iter : str_vec)
+    {
+      out << iter << ' ';
+    }
   }
   else
   {
     std::bad_cast ex;
     throw ex;
   }
-}
-
-std::ostream& operator << (std::ofstream& out, std::any& object)
-{
-  determine_type(object);
-
+  return out;
 }
 
 void PRINTER(const std::vector<Student>& students)
@@ -112,7 +108,6 @@ void PRINTER(const std::vector<Student>& students)
     // Здесь же проверить на все возможные типы, и просто перегрузить вывод для detType
     // после этого выводить detType
     // Можно ли проще?
-
 
 
     // TOP STRING

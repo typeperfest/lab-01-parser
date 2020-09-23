@@ -63,10 +63,10 @@ RM = /home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser
+CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser-test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug
+CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/parser_printer.dir/depend.make
@@ -79,16 +79,16 @@ include CMakeFiles/parser_printer.dir/flags.make
 
 CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o: CMakeFiles/parser_printer.dir/flags.make
 CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o: ../sources/parser_printer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o"
-	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o -c /home/perfest/AL_LABS/lab-01-parser/sources/parser_printer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o"
+	/usr/bin/g++-8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o -c /home/perfest/AL_LABS/lab-01-parser-test/sources/parser_printer.cpp
 
 CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.i"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/perfest/AL_LABS/lab-01-parser/sources/parser_printer.cpp > CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.i
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/perfest/AL_LABS/lab-01-parser-test/sources/parser_printer.cpp > CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.i
 
 CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.s"
-	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/perfest/AL_LABS/lab-01-parser/sources/parser_printer.cpp -o CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.s
+	/usr/bin/g++-8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/perfest/AL_LABS/lab-01-parser-test/sources/parser_printer.cpp -o CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.s
 
 # Object files for target parser_printer
 parser_printer_OBJECTS = \
@@ -100,7 +100,7 @@ parser_printer_EXTERNAL_OBJECTS =
 libparser_printerd.a: CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o
 libparser_printerd.a: CMakeFiles/parser_printer.dir/build.make
 libparser_printerd.a: CMakeFiles/parser_printer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libparser_printerd.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libparser_printerd.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/parser_printer.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parser_printer.dir/link.txt --verbose=$(VERBOSE)
 
@@ -114,6 +114,6 @@ CMakeFiles/parser_printer.dir/clean:
 .PHONY : CMakeFiles/parser_printer.dir/clean
 
 CMakeFiles/parser_printer.dir/depend:
-	cd /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/perfest/AL_LABS/lab-01-parser /home/perfest/AL_LABS/lab-01-parser /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles/parser_printer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/perfest/AL_LABS/lab-01-parser-test /home/perfest/AL_LABS/lab-01-parser-test /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles/parser_printer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/parser_printer.dir/depend
 

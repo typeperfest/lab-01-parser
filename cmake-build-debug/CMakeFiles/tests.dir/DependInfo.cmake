@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/perfest/AL_LABS/lab-01-parser/tests/test.cpp" "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles/tests.dir/tests/test.cpp.o"
+  "/home/perfest/AL_LABS/lab-01-parser-test/tests/test.cpp" "/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles/tests.dir/tests/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,9 +18,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/third_party/gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles/parser_printer.dir/DependInfo.cmake"
-  "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/third_party/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/third_party/gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles/parser_printer.dir/DependInfo.cmake"
+  "/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/third_party/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

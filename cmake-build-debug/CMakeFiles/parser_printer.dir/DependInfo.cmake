@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/perfest/AL_LABS/lab-01-parser/sources/parser_printer.cpp" "/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o"
+  "/home/perfest/AL_LABS/lab-01-parser-test/sources/parser_printer.cpp" "/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles/parser_printer.dir/sources/parser_printer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

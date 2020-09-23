@@ -64,10 +64,10 @@ RM = /home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain
+CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
+CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
 
 #=============================================================================
 # Directory level rules for the build root directory

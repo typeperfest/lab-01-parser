@@ -7,8 +7,8 @@
 #include <iostream>
 #include <vector>
 #include <typeinfo>
-#include <exception>
 #include <nlohmann/json.hpp>
+#include <string>
 
 
 std::vector<Student> PARSER(const std::string& fileName)
@@ -29,12 +29,54 @@ std::vector<Student> PARSER(const std::string& fileName)
   std::vector<Student> students;
   for (const auto& student : data.at("items")) {
     Student currentStudent;
+    //NAME
     currentStudent.Name = student.at("name");
-    currentStudent.Group = student.at("group");
-    currentStudent.Avg = student.at("Avg");
-    currentStudent.Debt = student.at("debt");
+    //END_NAME
 
-    
+    //GROUP
+    if (student.at("group").is_string())
+    {
+      currentStudent.Group = static_cast<std::string>(student.at("group"));
+    }
+    else if(student.at("group").is_number_integer())
+    {
+      currentStudent.Group = static_cast<int>(student.at("group"));
+    }
+    //END_GROUP
+
+    // AVG
+    if (student.at("avg").is_string()) {
+      std::size_t offset = 0;
+      std::string avgScoreRead = student.at("avg");
+      currentStudent.Avg = std::stod(avgScoreRead, &offset);
+    }
+    else if (student.at("avg").is_number_integer())
+    {
+      currentStudent.Avg = static_cast<float>(student.at("avg"));
+    }
+    else if (student.at("avg").is_number_float())
+    {
+      currentStudent.Avg = student.at("avg");
+    }
+    // END_AVG
+
+    // DEBT
+    if(student.at("debt").is_string())
+    {
+      currentStudent.Debt = static_cast<std::string>(student.at("debt"));
+    }
+    else if (student.at("debt").is_array())
+    {
+      currentStudent.Debt =
+          static_cast<std::vector<std::string>>(student.at("debt"));
+    }
+    else if (student.at("debt").is_null())
+    {
+      bool Flag = false;
+      currentStudent.Debt = Flag;
+    }
+    // END_DEBT
+
     // student.at("name").get_to(currentStudent.Name);
     // student.at("group").get_to(currentStudent.Group);
     // student.at("avg").get_to(currentStudent.Avg);
@@ -44,59 +86,69 @@ std::vector<Student> PARSER(const std::string& fileName)
   return students;
 }
 
-std::ostream& operator << (std::ostream& out, const std::any& object)
+std::string print_any(const std::any& object)
 {
+  std::string out_str;
   if (object.type() == typeid(std::string))
   {
-    out << std::any_cast<std::string>(object);
+    out_str = std::any_cast<std::string>(object);
   }
   else if (object.type() == typeid(int))
   {
-    out << std::any_cast<int>(object);
+    out_str = std::any_cast<int>(object);
   }
   else if (object.type() == typeid(float))
   {
-    out << std::any_cast<float>(object);
+    out_str = std::any_cast<float>(object);
   }
   else if (object.type() == typeid(std::vector<std::string>))
   {
     std::vector<std::string> str_vec = std::any_cast<std::vector<std::string>>(object);
-    for (auto& iter : str_vec)
+    int size = str_vec.size();
+    if (size > 1)
     {
-      out << iter << ' ';
+      out_str = std::to_string(size) + " items";
     }
+    else if (size == 1)
+    {
+      out_str = str_vec[0];
+    }
+  }
+  else if (object.type() == typeid(bool))
+  {
+    out_str = "null";
   }
   else
   {
     std::bad_cast ex;
     throw ex;
   }
-  return out;
+  return out_str;
 }
 
 void PRINTER(const std::vector<Student>& students)
 {
   // FIRST STRING
   std::cout << '|';
-  std::cout <<  std::setfill(' ') << "name" << std::setw(15);
+  std::cout <<  std::setfill(' ') << " name" << std::setw(11);
   std::cout << '|';
-  std::cout <<  std::setfill(' ') << "group" << std::setw(8);
+  std::cout <<  std::setfill(' ') << " group" << std::setw(3);
   std::cout << '|';
-  std::cout <<  std::setfill(' ') << "avg" << std::setw(6);
+  std::cout <<  std::setfill(' ') << " avg" << std::setw(3);
   std::cout << '|';
-  std::cout <<  std::setfill(' ') << "debt" << std::setw(15);
+  std::cout <<  std::setfill(' ') << " debt" << std::setw(11);
   std::cout << '|';
   std::cout << std::endl;
 
   // SECOND STRING
   std::cout << '|';
-  std::cout <<  std::setfill('-') << std::setw(15);
+  std::cout <<  std::setfill('-') << std::setw(16);
   std::cout << '|';
-  std::cout <<  std::setfill('-') << std::setw(8);
+  std::cout <<  std::setfill('-') << std::setw(9);
   std::cout << '|';
-  std::cout <<  std::setfill('-') << std::setw(6);
+  std::cout <<  std::setfill('-') << std::setw(7);
   std::cout << '|';
-  std::cout <<  std::setfill('-') << std::setw(15);
+  std::cout <<  std::setfill('-') << std::setw(16);
   std::cout << '|';
   std::cout << std::endl;
 
@@ -111,42 +163,25 @@ void PRINTER(const std::vector<Student>& students)
 
 
     // TOP STRING
-    std::cout << '|' << std::setfill(' ') << student.Name
-              << std::setw(15) << '|';
-    std::cout << std::setfill(' ') << student.Group
-              << std::setw(8) << '|';
-    std::cout << std::setfill(' ') << student.Avg
-              << std::setw(6) << '|';
-    int totalDebtSize = 0;
-    for (const auto& debt : student.Debt) totalDebtSize += static_cast<int>(debt.size()) + 1;
-    totalDebtSize--;
-
-    if (totalDebtSize > 15)
-    {
-      std::cout << std::setfill(' ') << std::setw(15)
-                << student.Debt.size() << " items" << '|';
-    }
-    else
-    {
-      std::string debtString;
-      for (const auto& debt : student.Debt)
-      {
-        debtString += debt;
-      }
-      std::cout << std::setfill(' ') << debtString << std::setw(15)
-      << '|';
-    }
+    std::cout << '|' << ' ' << std::setfill(' ') << std::left << std::setw(14) << student.Name
+              << '|' << ' ';
+    std::cout << std::setfill(' ') << std::setw(7) << print_any(student.Group)
+              << '|' << ' ';
+    std::cout << std::setfill(' ') << std::setw(5) << student.Avg
+              << '|' << ' ';
+    std::cout << std::setfill(' ') << std::setw(14) << print_any(student.Debt)
+              << '|';
     std::cout << std::endl;
 
     // BOTTOM STRING
     std::cout << '|';
-    std::cout <<  std::setfill('-') << std::setw(15);
+    std::cout <<  std::setfill('-') << std::right << std::setw(16);
     std::cout << '|';
-    std::cout <<  std::setfill('-') << std::setw(8);
+    std::cout <<  std::setfill('-') << std::setw(9);
     std::cout << '|';
-    std::cout <<  std::setfill('-') << std::setw(6);
+    std::cout <<  std::setfill('-') << std::setw(7);
     std::cout << '|';
-    std::cout <<  std::setfill('-') << std::setw(15);
+    std::cout <<  std::setfill('-') << std::setw(16);
     std::cout << '|';
     std::cout << std::endl;
 

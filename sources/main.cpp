@@ -4,11 +4,9 @@
 #include "parser_printer.hpp"
 #include <fstream>
 
-#define DEBUG
-
 // int argc, char* argv[]
 
-int main()
+int main(int argc, char* argv[])
 {
 
 #ifndef DEBUG
@@ -28,7 +26,7 @@ int main()
   std::vector<Student> students;
 
 #ifdef DEBUG
-  std::string fileName = "file.txt";
+  const std::string fileName = "file.txt";
 #endif
 
   students = PARSER(fileName);

@@ -68,10 +68,10 @@ RM = /home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain
+CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
+CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/_3rdParty/Hunter/toolchain/_builds/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

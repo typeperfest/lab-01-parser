@@ -64,10 +64,10 @@ RM = /home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser
+CMAKE_SOURCE_DIR = /home/perfest/AL_LABS/lab-01-parser-test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug
+CMAKE_BINARY_DIR = /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -160,14 +160,14 @@ third_party/gtest/googletest/clean: third_party/gtest/googletest/CMakeFiles/gtes
 CMakeFiles/parser_printer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser_printer.dir/build.make CMakeFiles/parser_printer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parser_printer.dir/build.make CMakeFiles/parser_printer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target parser_printer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target parser_printer"
 .PHONY : CMakeFiles/parser_printer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/parser_printer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/parser_printer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/parser_printer.dir/rule
 
 # Convenience name for target.
@@ -189,14 +189,14 @@ CMakeFiles/tests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/tests.dir/all: third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -216,14 +216,14 @@ CMakeFiles/tests.dir/clean:
 CMakeFiles/main.dir/all: CMakeFiles/parser_printer.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -244,14 +244,14 @@ third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all: third_party/gtest/go
 third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock_main"
 .PHONY : third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -271,14 +271,14 @@ third_party/gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 third_party/gtest/googlemock/CMakeFiles/gmock.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googlemock/CMakeFiles/gmock.dir/build.make third_party/gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target gmock"
 .PHONY : third_party/gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/gtest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : third_party/gtest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -298,14 +298,14 @@ third_party/gtest/googlemock/CMakeFiles/gmock.dir/clean:
 third_party/gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gtest"
 .PHONY : third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/gtest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/gtest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : third_party/gtest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -325,14 +325,14 @@ third_party/gtest/googletest/CMakeFiles/gtest.dir/clean:
 third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all: third_party/gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest_main.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/gtest/googletest/CMakeFiles/gtest_main.dir/build.make third_party/gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gtest_main"
 .PHONY : third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 third_party/gtest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 third_party/gtest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug/CMakeFiles 0
 .PHONY : third_party/gtest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.

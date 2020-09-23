@@ -1,4 +1,4 @@
-/home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/bin/g++-8 -G "CodeBlocks - Unix Makefiles" /home/perfest/AL_LABS/lab-01-parser
+/home/perfest/Clion/clion-2020.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/bin/g++-8 -G "CodeBlocks - Unix Makefiles" /home/perfest/AL_LABS/lab-01-parser-test
 -- [hunter] Calculating Toolchain-SHA1
 -- [hunter] Calculating Config-SHA1
 -- [hunter] HUNTER_ROOT: /home/perfest/.hunter
@@ -6,4 +6,4 @@
 -- [hunter] NLOHMANN_JSON_ROOT: /home/perfest/.hunter/_Base/9a3594a/020aca2/48401e9/Install (ver.: 3.6.1)
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/perfest/AL_LABS/lab-01-parser/cmake-build-debug
+-- Build files have been written to: /home/perfest/AL_LABS/lab-01-parser-test/cmake-build-debug

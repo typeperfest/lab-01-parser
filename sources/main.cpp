@@ -4,9 +4,11 @@
 #include "parser_printer.hpp"
 #include <fstream>
 
+#define DEBUG
+
 // int argc, char* argv[]
 
-int main(int argc, char* argv[])
+int main()
 {
 
 #ifndef DEBUG
@@ -26,7 +28,7 @@ int main(int argc, char* argv[])
   std::vector<Student> students;
 
 #ifdef DEBUG
-  const std::string fileName = "file.txt";
+  const std::string fileName = "file2.json";
 #endif
 
   students = PARSER(fileName);
